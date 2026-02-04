@@ -35,7 +35,7 @@ public class MemberService {
             // Check if email exists
             Optional<Member> existingMember = memberDAO.getMemberByEmail(email);
             if (existingMember.isPresent()) {
-                System.out.println("❌ Email already exists!");
+                System.out.println("Email already exists!");
                 return;
             }
 
@@ -56,14 +56,14 @@ public class MemberService {
             int memberId = memberDAO.addMember(member);
 
             if (memberId > 0) {
-                System.out.println("✅ Member added successfully!");
+                System.out.println("Member added success!");
                 System.out.println("Member ID: " + memberId);
             } else {
-                System.out.println("❌ Failed to add member!");
+                System.out.println("Failed to add member!");
             }
 
         } catch (Exception e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -106,7 +106,7 @@ public class MemberService {
 
             Optional<Member> memberOpt = memberDAO.getMemberById(memberId);
             if (!memberOpt.isPresent()) {
-                System.out.println("❌ Member not found!");
+                System.out.println("Member not found!");
                 return;
             }
 
@@ -139,13 +139,13 @@ public class MemberService {
             boolean success = memberDAO.updateMember(member);
 
             if (success) {
-                System.out.println("✅ Member updated successfully!");
+                System.out.println("Member updated successfully!");
             } else {
-                System.out.println("❌ Failed to update member!");
+                System.out.println("Failed to update member!");
             }
 
         } catch (NumberFormatException e) {
-            System.out.println("❌ Invalid member ID!");
+            System.out.println("Invalid member ID!");
         }
     }
 
@@ -169,13 +169,13 @@ public class MemberService {
             boolean success = memberDAO.softDeleteMember(memberId);
 
             if (success) {
-                System.out.println("✅ Member deleted successfully!");
+                System.out.println("Member deleted successfully!");
             } else {
-                System.out.println("❌ Failed to delete member!");
+                System.out.println("Failed to delete member!");
             }
 
         } catch (NumberFormatException e) {
-            System.out.println("❌ Invalid member ID!");
+            System.out.println("Invalid member ID!");
         }
     }
 

@@ -51,10 +51,10 @@ public class MenuView {
                         scanner.close();
                         return;
                     default:
-                        System.out.println("❌ Invalid choice!");
+                        System.out.println("Invalid choice!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("❌ Please enter a valid number!");
+                System.out.println("Please enter a valid number!");
             }
         }
     }
@@ -94,10 +94,10 @@ public class MenuView {
                     case 6:
                         return;
                     default:
-                        System.out.println("❌ Invalid choice!");
+                        System.out.println("Invalid choice!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("❌ Please enter a valid number!");
+                System.out.println("Please enter a valid number!");
             }
         }
     }
@@ -133,10 +133,10 @@ public class MenuView {
                     case 5:
                         return;
                     default:
-                        System.out.println("❌ Invalid choice!");
+                        System.out.println("Invalid choice!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("❌ Please enter a valid number!");
+                System.out.println("Please enter a valid number!");
             }
         }
     }
@@ -172,10 +172,10 @@ public class MenuView {
                     case 5:
                         return;
                     default:
-                        System.out.println("❌ Invalid choice!");
+                        System.out.println("Invalid choice!");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("❌ Please enter a valid number!");
+                System.out.println("Please enter a valid number!");
             }
         }
     }

@@ -33,7 +33,7 @@ public class SubscriptionService {
 
             Optional<Member> memberOpt = memberDAO.getMemberById(memberId);
             if (!memberOpt.isPresent()) {
-                System.out.println("❌ Member not found!");
+                System.out.println("Member not found!");
                 return;
             }
 
@@ -64,7 +64,7 @@ public class SubscriptionService {
                     price = 499.99;
                     break;
                 default:
-                    System.out.println("❌ Invalid plan!");
+                    System.out.println("Invalid plan!");
                     return;
             }
 
@@ -90,15 +90,15 @@ public class SubscriptionService {
             int subscriptionId = subscriptionDAO.addSubscription(subscription);
 
             if (subscriptionId > 0) {
-                System.out.println("✅ Subscription added successfully!");
+                System.out.println("Subscription added successfully!");
                 System.out.println("Subscription ID: " + subscriptionId);
                 System.out.println("End Date: " + endDate);
             } else {
-                System.out.println("❌ Failed to add subscription!");
+                System.out.println("Failed to add subscription!");
             }
 
         } catch (Exception e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -146,7 +146,7 @@ public class SubscriptionService {
 
             Optional<Subscription> subOpt = subscriptionDAO.getSubscriptionById(subscriptionId);
             if (!subOpt.isPresent()) {
-                System.out.println("❌ Subscription not found!");
+                System.out.println("Subscription not found!");
                 return;
             }
 
@@ -160,7 +160,7 @@ public class SubscriptionService {
             int days = Integer.parseInt(scanner.nextLine());
 
             if (days <= 0) {
-                System.out.println("❌ Invalid number of days!");
+                System.out.println("Invalid number of days!");
                 return;
             }
 
@@ -174,14 +174,14 @@ public class SubscriptionService {
             }
 
             if (success) {
-                System.out.println("✅ Subscription renewed successfully!");
+                System.out.println("Subscription renewed successfully!");
                 System.out.println("Extended by " + days + " days");
             } else {
-                System.out.println("❌ Failed to renew subscription!");
+                System.out.println("Failed to renew subscription!");
             }
 
         } catch (NumberFormatException e) {
-            System.out.println("❌ Invalid input!");
+            System.out.println("Invalid input!");
         }
     }
 
